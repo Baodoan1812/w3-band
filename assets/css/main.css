@@ -1,0 +1,375 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col-half{
+    width: 50%;
+}
+.col{
+    padding: 0 8px;
+    float: left;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.clear{
+    clear: both;
+}
+html{
+    font-family: sans-serif;
+}
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+#nav>li>a{
+    color:white;
+    text-transform: uppercase;
+}
+#nav li a{
+    
+    padding: 0 24px;
+    line-height: 46px;
+    text-decoration: none;
+    
+}
+#nav li:hover .subnav
+{
+    display: block;
+   
+}
+#nav .subnav li:hover a,
+#nav>li:hover>a{
+    color: black;
+    background-color: gray;
+    display: block;
+}
+#nav .subnav{
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+#nav .subnav li{
+    min-width: 160px;
+}
+#nav .subnav a{
+    color: black;
+    line-height: 38px;
+    padding: 0 12px;
+}
+#nav .down-button{
+    font-size: 12px;
+}
+#header #search{
+    float:right;
+    
+    padding: 0 21px;
+}
+#header #search:hover{
+    background-color: red;
+    cursor: pointer;
+}
+#header .search-button{
+    color: white;
+    line-height: 46px;
+    font-size: 20px;
+}
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    color: white;
+    background: url('/assets/img/slice1.jpg') top center / cover no-repeat;
+}
+#slider #text-content{
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+}
+#slider #text-content .text-heading{
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+#slider .text-des{
+    font-size: 15px;
+}
+#content{
+   
+}
+.section-content{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-content .heading{
+    padding-top: 64px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+#content .section-content .sub-heading{
+    padding-top:25px ;
+    font-size:15px;
+    font-style: italic;
+    opacity: 0.6;
+    text-align: center;
+}
+#content .section-content .about-content{
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 15px;
+    padding-top: 25px;
+
+}
+#content .list{
+    margin-top: 48px;
+    width: 100%;
+    /* overflow: hidden; */
+}
+#content .list-name{
+    float: right;
+    text-align: center;
+    width: 33.3333%;
+    
+}
+#content .name{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+#content .image{
+    width: 154px;
+    border-radius: 4px;
+}
+#tour-content{
+    margin-top: 100px;
+    background-color: black;
+}
+#tour-content .section-content{
+    color: white;
+}
+.tour-list{
+    background-color: white;
+    margin-top: 40px;
+}
+.list-month  .month{
+    color: #757575;
+    padding: 8px 16px;
+    list-style-type: none;
+    font-size: 15px;
+    border-bottom: #757575 solid 0.3px;
+}
+.sold-out{
+    background-color: red;
+    color:white;
+    margin-left: 16px;
+    padding: 4px 8px;
+}
+.quantity{
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 17.6px;
+    padding: 0 8px;
+    margin-top: -2px;
+    margin-right: 16px;
+}
+.list-place{
+    margin-top: 25px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.place-items{
+    float:left;
+    width: 33.33333%;
+    padding: 0px 8px;
+}
+.image-place{
+    width: 100%;
+    display: block;
+}
+.image-place:hover
+{
+    opacity: 0.6;
+}
+.place-content{
+    font-size:15px;
+    background-color: white;
+    color: black;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 80px;
+}
+.place-content .heading-name{
+    padding: 15px 0;
+    font-weight: 550;
+}
+.place-content .time{
+    opacity: 0.6;
+    padding-bottom: 15px;
+}
+.place-content .des{
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+.place-content .btn{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+.place-content .btn:hover{
+    color: black;
+    background-color: #ccc;
+}
+.ticket{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+.ticket.open{
+    display: flex;
+}
+.ticket-container{
+    width: 900px;
+    min-height: 300px;
+    background-color: white;
+    color: black;
+    position: relative;
+    padding-bottom: 30px;
+
+}
+.ti-close{
+    position: absolute;
+    right: 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white;
+}
+.ti-close:hover{
+    color: black;
+    background-color: #ccc;
+}
+.ti-bag{
+    margin-right: 16px;
+}
+.modal-header{
+    background-color: #009688;
+    font-size: 30px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 4px;
+}
+.modal-content{
+    padding: 0px 16px;
+    font-size:15px;
+}
+.modal-heading{
+    display: block;
+    margin: 16px 0;
+}
+.modal-input{
+    padding: 8px;
+    width: 100%;
+}
+.modal-pay{
+    cursor: pointer;
+    margin: 16px 0;
+    padding: 16px;
+    width: 100%;
+    background-color: #009688;
+    color: white;
+    text-transform: uppercase;
+}
+.modal-pay:hover{
+    opacity: 0.8;
+}
+.footer-content{
+    text-align: right;
+    padding-right: 16px;
+}
+.footer-content a{
+    color:#2196F3;
+    margin: 15px 0;
+}
+.lienhe{
+    margin: 48px 0;
+}
+.icons{
+    display: block;  
+}
+.left-content i{
+    line-height: 1.5;
+    font-size: 18px;
+}
+.dong1{
+    width: 100%;
+    padding: 8px;
+}
+.hang1{
+    margin-bottom: 8px;
+}
+.submit-btn{
+    float: right;
+    margin: 16px 0;
+    padding: 8px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    color: black;
+    background-color: #ccc;
+}
+#footer{
+    margin: 64px 0;
+    text-align: center;
+}
+#footer i{
+    padding: 3px
+}
+#footer p{
+    margin-top:16px;
+    opacity: 0.6;
+}
+#footer i:hover{
+    opacity: 0.6;
+}
+
+
